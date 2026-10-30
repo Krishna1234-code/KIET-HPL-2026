@@ -279,7 +279,7 @@ function App() {
             <label>Email address<input type="email" value={loginEmail} onChange={e => setLoginEmail(e.target.value)} placeholder="admin@college.edu" required autoComplete="username"/></label>
             <label>Password<input type="password" value={loginPassword} onChange={e => setLoginPassword(e.target.value)} placeholder="Enter admin password" required autoComplete="current-password"/></label>
             <button className="primary-button full-button" disabled={saving || !configured}>{saving ? "Signing in…" : <><LogIn size={17}/> Sign in securely</>}</button>
-            <span className="login-foot">Admin access only · Contact the SPL administrator for access.</span>
+            <span className="login-foot">Admin access only · Contact the HPL administrator for access.</span>
           </form></section>
         )}
 
