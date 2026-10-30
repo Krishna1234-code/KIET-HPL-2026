@@ -210,3 +210,54 @@ th, td, .modal-intro, .form-grid label, .students-form-head p,
     font-size: 13px;
   }
 }
+
+
+/* Extra breathing room before the closing results call-to-action */
+.bottom-cta {
+  margin-top: 30px;
+}
+
+/* Make live leaderboard data easier to read */
+.hostel-info strong { font-size: 18px; }
+.hostel-info span { font-size: 14px; }
+.medal-counts span { font-size: 14px; }
+.rank-badge, .hostel-avatar { font-size: 14px; }
+.points strong { font-size: 28px; }
+.points span { font-size: 13px; }
+.points-note { font-size: 14px; }
+
+/* Make the stats below the leaderboard clearer */
+.stat-note, .stat-label { font-size: 14px; }
+.stat-value { font-size: 34px; }
+
+/* Larger typography for result cards and student data */
+.result-card h3 { font-size: 20px; }
+.result-hostel { font-size: 16px; }
+.medal-pill, .result-points { font-size: 14px; }
+.student-list-label { font-size: 13px; }
+.student-line { font-size: 15px; }
+.student-line small { font-size: 13px; }
+.no-students { font-size: 14px; }
+
+/* Admin result list: clearer values and controls */
+.admin-summary span { font-size: 15px; }
+.admin-table-wrap th { font-size: 13px; }
+.admin-table-wrap td { font-size: 15px; }
+.table-sport { font-size: 16px; }
+
+/* General section descriptions and filters */
+.section-heading p, .searchbox input, .filters select { font-size: 16px; }
+
+@media (max-width: 800px) {
+  .bottom-cta { margin-top: 26px; }
+}
+@media (max-width: 560px) {
+  .bottom-cta { margin-top: 24px; }
+  .hostel-info strong { font-size: 16px; }
+  .hostel-info span, .medal-counts span { font-size: 13px; }
+  .points strong { font-size: 24px; }
+  .stat-value { font-size: 30px; }
+  .result-card h3 { font-size: 19px; }
+  .student-line { font-size: 14px; }
+  .admin-table-wrap td { font-size: 14px; }
+}
