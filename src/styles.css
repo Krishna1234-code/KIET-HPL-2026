@@ -272,3 +272,129 @@ th, td, .modal-intro, .form-grid label, .students-form-head p,
     margin-top: 22px !important;
   }
 }
+
+
+/* ==========================================================
+   Responsive layout: laptop, tablet and mobile
+   ========================================================== */
+img, svg { max-width: 100%; }
+.container { min-width: 0; }
+.admin-table-wrap { max-width: 100%; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+.admin-table-wrap table { min-width: 680px; }
+.result-modal, .login-card, .stat-card, .result-card { min-width: 0; }
+input, select, textarea { max-width: 100%; }
+
+/* Smaller laptops and landscape tablets */
+@media (max-width: 1024px) {
+  .container { width: min(94%, 920px); }
+  .topbar { padding-left: 3%; padding-right: 3%; }
+  .hero { padding-left: 38px; padding-right: 38px; }
+  .hero-art { right: -28px; transform: scale(.88); transform-origin: center right; }
+  .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .section-block { margin-top: 40px; }
+}
+
+/* Tablets */
+@media (max-width: 800px) {
+  .topbar { height: auto; min-height: 68px; padding: 12px 4%; gap: 12px; }
+  .brand { flex-shrink: 0; }
+  .topbar nav { flex-wrap: wrap; justify-content: flex-end; }
+  .nav-link, .nav-admin { padding: 9px 10px; }
+  .container { width: 92%; }
+  .hero { min-height: 390px; padding: 38px 30px 58px; }
+  .hero-copy { max-width: 60%; }
+  .hero-art { right: -115px; opacity: .35; transform: scale(.82); }
+  .hero h1 { font-size: clamp(32px, 5vw, 46px); }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .results-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .leader-row { gap: 10px; padding: 13px 14px; }
+  .medal-counts { min-width: 0; gap: 12px; }
+  .footer { flex-wrap: wrap; justify-content: center; text-align: center; }
+  .section-heading { align-items: flex-start; }
+  .admin-summary { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+
+/* Phones */
+@media (max-width: 560px) {
+  body { min-width: 320px; }
+  .topbar { position: relative; align-items: stretch; flex-direction: column; padding: 12px 4%; }
+  .brand strong { font-size: 18px; }
+  .brand small { font-size: 9px; letter-spacing: 1.2px; }
+  .topbar nav { width: 100%; justify-content: space-between; gap: 4px; }
+  .nav-link, .nav-admin { flex: 1 1 auto; justify-content: center; padding: 9px 6px; font-size: 12px; white-space: nowrap; }
+  .container { width: 92%; }
+  .hero { margin: 16px 0 20px; min-height: 0; padding: 28px 20px 68px; border-radius: 18px; }
+  .hero-copy { max-width: 100%; }
+  .hero h1 { font-size: clamp(31px, 9vw, 39px); line-height: 1.12; letter-spacing: -1.2px; }
+  .hero p { max-width: 100%; font-size: 14px; line-height: 1.6; }
+  .hero-art { right: -190px; top: 15px; opacity: .13; transform: scale(.72); pointer-events: none; }
+  .hero-bottom { height: 42px; padding: 0 12px; font-size: 9px; letter-spacing: .6px; }
+  .hero-bottom span:last-child { display: none; }
+  .hero-actions { width: 100%; max-width: 100%; flex-direction: column; align-items: stretch; gap: 10px; margin: 20px 0 10px; }
+  .hero-actions .primary-button, .hero-actions .secondary-button { width: 100%; min-height: 48px; }
+  .stats-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; }
+  .stat-card { padding: 13px; border-radius: 12px; }
+  .stat-value { font-size: 27px; margin-top: 10px; }
+  .stat-note, .stat-label { font-size: 11px; }
+  .section-block { margin: 32px 0 28px; }
+  .section-heading { flex-direction: column; align-items: stretch; gap: 12px; }
+  .section-heading h2 { font-size: 23px; }
+  .section-heading p { max-width: 100%; font-size: 13px; line-height: 1.5; }
+  .section-heading > .primary-button { width: 100%; white-space: normal; }
+  .leaderboard-list { border-radius: 13px; }
+  .leader-row { display: grid; grid-template-columns: 30px 36px minmax(0, 1fr) auto; gap: 8px; padding: 12px 9px; min-height: 0; }
+  .rank-badge { width: 28px; height: 28px; }
+  .hostel-avatar { width: 34px; height: 34px; }
+  .hostel-info { min-width: 0; }
+  .hostel-info strong { font-size: 14px; overflow-wrap: anywhere; }
+  .hostel-info span { font-size: 11px; }
+  .medal-counts { grid-column: 2 / 4; margin: 0; gap: 13px; min-width: 0; flex-wrap: wrap; }
+  .medal-counts span { font-size: 11px; }
+  .points { grid-column: 4; grid-row: 1 / span 2; min-width: 42px; align-self: center; }
+  .points strong { font-size: 21px; }
+  .points span { font-size: 9px; }
+  .points-note { flex-direction: column; gap: 5px; font-size: 11px; }
+  .bottom-cta { align-items: flex-start; flex-wrap: wrap; gap: 12px; padding: 16px; margin-bottom: 30px; }
+  .bottom-cta div:nth-child(2) { flex: 1 1 calc(100% - 64px); min-width: 0; }
+  .bottom-cta p { line-height: 1.5; }
+  .bottom-cta .secondary-button { width: 100%; }
+  .results-grid { grid-template-columns: minmax(0, 1fr); gap: 11px; }
+  .result-card { padding: 16px; }
+  .filters { flex-direction: column; gap: 9px; }
+  .searchbox, .filters select { width: 100%; min-width: 0; }
+  .admin-summary { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 7px; }
+  .admin-summary div { min-width: 0; padding: 11px 8px; }
+  .admin-summary span { font-size: 10px; overflow-wrap: anywhere; }
+  .admin-summary strong { font-size: 20px; }
+  .admin-table-wrap { border-radius: 10px; }
+  .admin-table-wrap table { min-width: 650px; }
+  .footer { flex-direction: column; gap: 8px; padding: 18px 4%; font-size: 9px; letter-spacing: .6px; }
+  .login-wrap { min-height: auto; padding: 28px 0 40px; }
+  .login-card { width: 100%; padding: 23px 19px; border-radius: 16px; }
+  .login-card h2 { font-size: 26px; }
+  .login-card > p { line-height: 1.6; }
+  .login-card label { display: block; }
+  .login-card input { width: 100%; min-width: 0; }
+  .login-foot { display: block; text-align: center; line-height: 1.5; }
+  .modal-backdrop { padding: 10px; align-items: start; }
+  .result-modal { width: 100%; max-height: calc(100dvh - 20px); padding: 17px; border-radius: 14px; }
+  .form-grid { grid-template-columns: minmax(0, 1fr); }
+  .full-span { grid-column: auto; }
+  .person-row { grid-template-columns: 18px minmax(0, 1fr) 86px 20px; gap: 5px; }
+  .person-row input, .person-row select { width: 100%; min-width: 0; }
+  .modal-actions { flex-wrap: wrap; }
+  .modal-actions button { flex: 1 1 120px; }
+}
+
+/* Very narrow phones */
+@media (max-width: 380px) {
+  .nav-link, .nav-admin { font-size: 11px; padding: 8px 4px; }
+  .hero { padding-left: 16px; padding-right: 16px; }
+  .hero h1 { font-size: 30px; }
+  .stat-card { padding: 11px; }
+  .stat-value { font-size: 24px; }
+  .leader-row { grid-template-columns: 26px 32px minmax(0, 1fr) 40px; gap: 6px; }
+  .medal-counts { gap: 9px; }
+  .admin-summary span { font-size: 9px; }
+  .admin-summary strong { font-size: 18px; }
+}
