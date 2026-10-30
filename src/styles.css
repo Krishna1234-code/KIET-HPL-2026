@@ -261,3 +261,14 @@ th, td, .modal-intro, .form-grid label, .students-form-head p,
   .student-line { font-size: 14px; }
   .admin-table-wrap td { font-size: 14px; }
 }
+
+
+/* Clear vertical separation between stats cards and the closing CTA */
+.stats-grid + .bottom-cta {
+  margin-top: 28px !important;
+}
+@media (max-width: 560px) {
+  .stats-grid + .bottom-cta {
+    margin-top: 22px !important;
+  }
+}
