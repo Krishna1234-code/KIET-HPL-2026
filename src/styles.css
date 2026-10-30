@@ -24,3 +24,41 @@ th, td, .modal-intro, .form-grid label, .students-form-head p,
   .stat-note, .admin-summary span { font-size: 11px; }
   .medal-counts span, .student-line, .person-row input, .person-row select { font-size: 12px; }
 }
+
+/* Hero action buttons */
+.hero-actions {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  position: relative;
+  z-index: 3;
+}
+.hero-actions .primary-button,
+.hero-actions .secondary-button {
+  min-height: 48px;
+  padding: 12px 18px;
+}
+.hero-actions .secondary-button {
+  border-color: #8d682c;
+  color: var(--gold);
+  background: rgba(17, 27, 43, 0.72);
+}
+.hero-actions .secondary-button:hover {
+  background: #243650;
+  border-color: var(--gold);
+}
+#leaderboard-section {
+  scroll-margin-top: 96px;
+}
+@media (max-width: 560px) {
+  .hero-actions {
+    align-items: stretch;
+    flex-direction: column;
+    width: min(100%, 280px);
+  }
+  .hero-actions button {
+    width: 100%;
+    justify-content: center;
+  }
+}
