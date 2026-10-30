@@ -62,3 +62,151 @@ th, td, .modal-intro, .form-grid label, .students-form-head p,
     justify-content: center;
   }
 }
+
+
+/* Final spacing and typography refinement */
+.hero-actions {
+  gap: 18px;
+  margin-top: 28px;
+  margin-bottom: 24px;
+}
+.hero-actions .primary-button,
+.hero-actions .secondary-button {
+  min-height: 52px;
+  padding: 13px 21px;
+}
+.hero-copy {
+  padding-bottom: 10px;
+}
+.hero {
+  min-height: 410px;
+}
+
+/* Leaderboard: clearer hostel names, medal counts and points */
+.hostel-info strong {
+  font-size: 16px;
+}
+.hostel-info span {
+  font-size: 13px;
+}
+.medal-counts {
+  gap: 24px;
+}
+.medal-counts span {
+  font-size: 13px;
+}
+.rank-badge,
+.hostel-avatar {
+  font-size: 13px;
+}
+.points span {
+  font-size: 12px;
+}
+.points-note {
+  font-size: 13px;
+}
+
+/* Results page and result cards */
+.section-heading p {
+  font-size: 15px;
+}
+.searchbox input,
+.filters select {
+  font-size: 15px;
+}
+.result-card {
+  padding: 20px;
+}
+.medal-pill {
+  font-size: 13px;
+}
+.result-points {
+  font-size: 13px;
+}
+.result-card h3 {
+  font-size: 19px;
+}
+.result-hostel {
+  font-size: 15px;
+}
+.student-list-label {
+  font-size: 12px;
+}
+.student-line {
+  font-size: 14px;
+}
+.student-line small {
+  font-size: 12px;
+}
+.no-students {
+  font-size: 14px;
+}
+
+/* Admin panel: improve table and summary readability */
+.admin-summary span {
+  font-size: 14px;
+}
+.admin-table-wrap th {
+  font-size: 12px;
+  padding: 15px 17px;
+}
+.admin-table-wrap td {
+  font-size: 14px;
+  padding: 15px 17px;
+}
+.table-sport {
+  font-size: 15px;
+}
+.table-actions button {
+  width: 34px;
+  height: 34px;
+}
+
+/* Keep the improved spacing balanced on smaller screens */
+@media (max-width: 800px) {
+  .hero {
+    min-height: 400px;
+  }
+  .medal-counts {
+    gap: 14px;
+  }
+}
+@media (max-width: 560px) {
+  .hero {
+    min-height: 430px;
+  }
+  .hero-actions {
+    gap: 14px;
+    margin-top: 24px;
+    margin-bottom: 18px;
+    width: min(100%, 300px);
+  }
+  .hero-actions .primary-button,
+  .hero-actions .secondary-button {
+    min-height: 50px;
+    padding: 12px 14px;
+    font-size: 14px;
+  }
+  .hostel-info strong {
+    font-size: 15px;
+  }
+  .hostel-info span,
+  .medal-counts span {
+    font-size: 12px;
+  }
+  .medal-counts {
+    gap: 12px;
+  }
+  .points-note {
+    font-size: 12px;
+  }
+  .result-card h3 {
+    font-size: 18px;
+  }
+  .student-line {
+    font-size: 13px;
+  }
+  .admin-table-wrap td {
+    font-size: 13px;
+  }
+}
