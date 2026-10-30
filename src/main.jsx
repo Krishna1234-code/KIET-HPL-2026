@@ -211,9 +211,12 @@ function App() {
             <section className="hero">
               <div className="hero-copy">
                 <div className="eyebrow"><span className="live-dot"/> THE CAMPUS SHOWDOWN</div>
-                <h1>One campus.<br/><span>Six hostels.</span> One champion.</h1>
+                <h1>One campus.<br/><span>Seven hostels.</span> One champion.</h1>
                 <p>Every match matters. Track the medal race and see which hostel leads HPL 2026.</p>
-                <button className="primary-button" onClick={() => setPage("results")}>Explore results <ChevronDown size={17}/></button>
+                <div className="hero-actions">
+                  <button className="primary-button" onClick={() => setPage("results")}>Explore Results <ChevronDown size={17}/></button>
+                  <button className="secondary-button" onClick={() => document.getElementById("leaderboard-section")?.scrollIntoView({ behavior: "smooth", block: "start" })}>Explore Leaderboard <Trophy size={17}/></button>
+                </div>
               </div>
               <div className="hero-art" aria-hidden="true">
                 <div className="orbit orbit-one"/><div className="orbit orbit-two"/>
@@ -227,9 +230,9 @@ function App() {
 
 
 
-            <section className="section-block">
+            <section className="section-block" id="leaderboard-section">
               <div className="section-heading"><div><div className="eyebrow">THE RACE TO THE TOP</div><h2>Hostel standings</h2><p>All hostels start at zero. Rankings update automatically after each result.</p></div><button className="icon-button" onClick={() => loadData()} title="Refresh"><RefreshCw size={17}/></button></div>
-              {loading ? <Loading/> : leaderboard.length === 0 ? <Empty text="All six hostels start at zero. Medal standings will update here after results are published."/> : (
+              {loading ? <Loading/> : leaderboard.length === 0 ? <Empty text="All participating hostels start at zero. Medal standings will update here after results are published."/> : (
                 <div className="leaderboard-list">
                   {leaderboard.map((h, i) => (
                     <div className={`leader-row ${i === 0 && h.points > 0 ? "leader-first" : ""}`} key={h.id}>
